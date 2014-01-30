@@ -1,2 +1,26 @@
-<h1>Add An Item to Your Registry</h1>
-
+<h2>Add an Item to Your Registry</h2>
+<%= form_for @item do |f| %>
+    <p>
+        <%= f.label "Item Name" %><br>
+        <%= f.text_field "item_name" %>
+    </p>
+    <p>
+        <%= f.label "Item Description" %><br>
+        <%= f.text_area "item_description" %>
+    </p>
+    <p>
+        <%= f.label "Url of Item Image" %><br>
+        <%= f.text_field "item_url" %>
+    </p>
+    <p>
+        <%= f.label "Name of Retailer" %><br>
+        <%= f.text_field "item_stockist" %>
+    </p>
+    <p>
+        <%= f.label "Retailer URL" %><br>
+        <%= f.text_field "item_stockist_url" %>
+    </p>
+    <p>
+        <%= f.submit "Save" %> 
+    </p>
+<% end %>

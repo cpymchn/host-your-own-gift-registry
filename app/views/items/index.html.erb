@@ -3,3 +3,22 @@
   Introductory paragraph
 </p>
 <hr />
+<% @items.each do |item| %>
+  <div class="item">
+    <h2><%= item[:item_name] %></h2>
+    <div class="left">
+      <img src="<%= item[:item_url] %>">
+    </div>
+    <div class="right">
+      <p>
+        <%= item[:item_description] %>
+      </p>
+      <p>
+      This item is available at 
+      <a href="<%= item[:item_stockist_url] %> target="_blank"">
+        <%= item[:item_stockist] %></a>
+      </p>
+      </div>
+    <hr />
+  </div>
+<% end %>
