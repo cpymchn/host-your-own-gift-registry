@@ -1,13 +1,16 @@
 <div class="container">
-  <h1>Gift Registry</h1>
-  <p>
-    Introductory paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
-  </p>
-  <p>
-    <span class="strong">Instructions:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
-  </p>
-  <hr />
+  <header>
+    <h1>Gift Registry</h1>
+    <p>
+      Introductory paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
+    </p>
+    <p>
+      <span class="strong">Instructions:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
+    </p>
+    <hr />
+  </header>
   <% @items.each do |item| %>
+  <section>
     <div class="item group">
       <h2><%= item[:item_name] %></h2>
       <div class="left">
@@ -26,4 +29,8 @@
       </div>
       <hr />
   <% end %>
+  </section>
+  <footer>
+    made in toronto :: <span title="Provided on an 'as is' basis, without warranty of any kind, either express or implied.">unwarranty</span> :: <span title="No permission is needed to copy, distribute, or modify the content of this site.">uncopyright</span>
+  </footer>
 </div>
