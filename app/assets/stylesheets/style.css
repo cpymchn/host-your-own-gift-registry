@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*
+            _           __               
+           | |         / /               
+  _ __ ___ | |__      / /    ___ ___ ___ 
+ | '  ' _ \|  _ \    / /    / __/ __/ __|
+ | | | | | | |_) |  / /    | (__\__ \__ \
+ |_| |_| |_|_.__/  /_/      \___|___/___/
+*/
+
+/* Standard mboiler -- begin */
+  body {
+    min-height: 100%;
+    width:100%;
+    color:#57534a;
+    font-size:1em;
+    line-height:1.625em;
+    text-rendering: optimizeLegibility; /*kerning goodness*/
+    -webkit-text-size-adjust: 100%; /*allowing text inflation on mobile*/
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+  }
+
+  a:link, a:visited {text-decoration: none;}
+  a:visited {color:#57534a;}
+  a:hover, a:active {border-bottom:0.063em solid;}
+
+  /* for a consistent ratio,  padding is line height divided by font size */
+  h1 {font-size:2.625em; padding:0.619047619em 0;} /* title */
+  h2 {font-size:1.625em; padding:1em 0;} /* heading */
+  h3 {font-size:1.250em; padding:1.3em 0;} /* subheads */
+  
+  h1, h2, h3 {
+    color: #423f37;
+    font-weight: 600;
+  }
+  .strong {font-weight: bold;}
+  .container {margin: 11.111111111% 14.814814822% 22.222222222% 7.407407411%} 
+  .left {float: left;}
+  .right {float: right;}
+  .group:before, .group:after {
+    content: "";
+    display: table;
+  }
+  .group:after {
+    clear: both;
+  }
+  .group {
+    *zoom: 1;
+  }
+/* Standard mboiler -- end */
+
+/* Global Font Declarations -- begin */
+  @font-face {
+   font-family: 'Open Sans';
+   font-style: normal;
+   font-weight: 600;
+   src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v7/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+ }
+
+  @font-face {
+   font-family: 'Gentium Basic';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Gentium Basic'), local('GentiumBasic'), url(http://themes.googleusercontent.com/static/fonts/gentiumbasic/v5/KCktj43blvLkhOTolFn-MZ_RtrTXGeaL_Dia6_H9gNs.woff) format('woff');
+ }
+
+body {font-family:'Gentium Basic', Georgia, serif;}
+h1, h2, h3, h4, h5, h6 {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+/* Global Font Declarations -- end */
+
+.left, .right {width:50%}
+.left > img {
+  width: 90%;
+  float: right;
+  padding-right:10%;
+}
+
+p {margin-bottom: 1.5em}
+
+.strong{
+  font-size: 1.2em;
+}
