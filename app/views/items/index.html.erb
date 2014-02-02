@@ -25,7 +25,14 @@
         <a href="<%= item[:item_stockist_url] %> target="_blank"">
           <%= item[:item_stockist] %></a>
         </p>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <div class="onoffswitch-inner"></div>
+            <div class="onoffswitch-switch"></div>
+          </label>
         </div>
+      </div>
       </div>
       <hr />
   <% end %>

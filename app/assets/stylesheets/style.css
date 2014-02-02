@@ -25,7 +25,7 @@
   a:visited {color:#57534a;}
   a:hover, a:active {border-bottom:0.063em solid;}
 
-  /* for a consistent ratio,  padding is line height divided by font size */
+  /* for a consistent ratio, padding is line height divided by font size */
   h1 {font-size:2.625em; padding:0.619047619em 0;} /* title */
   h2 {font-size:1.625em; padding:1em 0;} /* heading */
   h3 {font-size:1.250em; padding:1.3em 0;} /* subheads */
@@ -35,19 +35,24 @@
     font-weight: 600;
   }
   .strong {font-weight: bold;}
-  .container {margin: 11.111111111% 14.814814822% 22.222222222% 7.407407411%} 
+  /* begin -- quick and dirty approximation of a 9x9 grid w/ cells sized in a 2:3 ratio */
+    .container {margin: 11.111111111% 14.814814822% 22.222222222% 7.407407411%} 
+  /* end */
   .left {float: left;}
   .right {float: right;}
-  .group:before, .group:after {
-    content: "";
-    display: table;
-  }
-  .group:after {
-    clear: both;
-  }
-  .group {
-    *zoom: 1;
-  }
+  
+  /* clearfix begin*/
+    .group:before, .group:after {
+      content: "";
+      display: table;
+    }
+    .group:after {
+      clear: both;
+    }
+    .group {
+      *zoom: 1;
+    }
+  /* clearfix end*/
 /* Standard mboiler -- end */
 
 /* Global Font Declarations -- begin */
@@ -87,3 +92,69 @@ footer {
   text-align: right;
   margin-top: 1.25em;
 }
+/* switch style begin */
+  .onoffswitch {
+    position: relative;
+    margin-bottom: 1.25em;
+    width: 13em;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+  }
+  .onoffswitch-checkbox {
+    display: none;
+  }
+  .onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0.125em ridge #bfbfbf;
+    border-radius: 1.250em;
+  }
+  .onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+  }
+  .onoffswitch-inner:before, .onoffswitch-inner:after {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    float: left;
+    width: 50%;
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 1.250em;
+    color: white;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .onoffswitch-inner:before {
+    content: "Not Yet Claimed";
+    padding-left: 5px;
+    background-color: #749017; color: #FFFFFF;
+  }
+  .onoffswitch-inner:after {
+    content: "Already Claimed";
+    padding-right: 5px;
+    background-color: #E14E0C; color: #FFFFFF;
+    text-align: right;
+  }
+  .onoffswitch-switch {
+    width: 10px; margin: 15px;
+    background: #FFFFFF;
+    border: 2px solid #423F37; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 156px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+  }
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+  }
+  .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+  }
+/* switch style end */
