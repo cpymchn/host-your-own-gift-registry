@@ -1,12 +1,22 @@
+<div class="ad">ad</div>
 <div class="container">
   <header>
     <h1>Gift Registry</h1>
     <p>
-      Introductory paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
+      Welcome to our gift registry. We are thrilled you can participate in our big event. Beyond sharing things with you, our wants are modest. To streamline things we have prepared the list below. A gift would be very kind but your participation is our foremost wish. 
     </p>
     <p>
-      <span class="strong">Instructions:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et quam congue, volutpat sem id, mattis justo. Etiam venenatis leo quis sapien sagittis, sit amet sollicitudin neque ultrices. Cras ut eros sed nisi rhoncus condimentum sit amet quis libero. Quisque et aliquam purus, eu laoreet justo. Duis tincidunt est elementum erat sagittis, venenatis dictum tellus tincidunt. Aenean rhoncus nibh eu urna pulvinar, sodales luctus lacus elementum. Integer eu velit elementum, rutrum justo et, molestie urna.
+      Thanks so much,<br />
+        PLACEHOLDER_FOR_NAME
     </p>
+    <blockquote>
+      <p>
+        <span class="strong">Instructions:</span> If you have purchased — or you plan to purchase — one of the gift items, simply click the 'Not Yet Claimed' button. The button will change color letting everyone else who visits this page that item is spoken for. In the event you change your mind, click the button again and the item will be made available to be claimed by someone else.
+      </p>
+      <p class="small">
+        The list has been tested on several mobile devices and in several different internet browsers, but the tests have not been exhaustive, so if you experience difficulty claiming or unclaiming an item, then please try a different browser. If the problem persists — we apologize — please email PLACEHOLDER_FOR_ADMIN_EMAIL.
+      </p>
+    </blockquote>
     <hr />
   </header>
   <% @items.each do |item| %>
@@ -26,8 +36,8 @@
           <%= item[:item_stockist] %></a>
         </p>
         <div class="onoffswitch">
-          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-          <label class="onoffswitch-label" for="myonoffswitch">
+          <input type="checkbox" name="onoffswitch<%= item[:id] %>" class="onoffswitch-checkbox" id="myonoffswitch<%= item[:id] %>" checked>
+          <label class="onoffswitch-label" for="myonoffswitch<%= item[:id] %>">
             <div class="onoffswitch-inner"></div>
             <div class="onoffswitch-switch"></div>
           </label>

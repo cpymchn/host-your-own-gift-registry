@@ -34,13 +34,15 @@
     color: #423f37;
     font-weight: 600;
   }
-  .strong {font-weight: bold;}
   /* begin -- quick and dirty approximation of a 9x9 grid w/ cells sized in a 2:3 ratio */
     .container {margin: 11.111111111% 14.814814822% 22.222222222% 7.407407411%} 
   /* end */
+
+  .small {font-size:0.65em; line-height:1em}
+  .strong {font-weight: bold;}
   .left {float: left;}
   .right {float: right;}
-  
+
   /* clearfix begin*/
     .group:before, .group:after {
       content: "";
@@ -53,9 +55,10 @@
       *zoom: 1;
     }
   /* clearfix end*/
-/* Standard mboiler -- end */
 
+/* Standard mboiler -- end */
 /* Global Font Declarations -- begin */
+
   @font-face {
    font-family: 'Open Sans';
    font-style: normal;
@@ -72,7 +75,27 @@
 
 body {font-family:'Gentium Basic', Georgia, serif;}
 h1, h2, h3, h4, h5, h6 {font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;}
+
 /* Global Font Declarations -- end */
+/* Project Specific Styles — begin */
+
+.ad {
+  color: #999999;
+  float:right;
+  position:relative;
+  top:-100px;
+  left: -150px;
+  width: 11.250em;
+  height: 9.375em;
+  background-color: #bfbfbf;
+  text-align: center;
+  vertical-align: middle;
+}
+
+blockquote {
+  border-left:.5em solid #73C99E;
+  padding-left: 1em;
+}
 
 .left, .right {width:50%}
 .left > img {
@@ -135,7 +158,7 @@ footer {
   .onoffswitch-inner:before {
     content: "Not Yet Claimed";
     padding-left: 5px;
-    background-color: #749017; color: #FFFFFF;
+    background-color: #73C99E; color: #FFFFFF;
   }
   .onoffswitch-inner:after {
     content: "Already Claimed";

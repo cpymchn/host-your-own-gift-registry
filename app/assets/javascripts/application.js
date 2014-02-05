@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+checkbox.onchange = function() {
+  if(this.checked) {
+    // do something when checked
+  }
+};}}
